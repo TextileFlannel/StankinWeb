@@ -1,0 +1,140 @@
+<html>
+<head>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=7e5f676c-a8f5-4233-988c-c40dcbbf2912&lang=ru_RU" type="text/javascript"></script>
+    <link rel="icon" type="image/svg" href="static/images/logo.svg">
+	<link rel="stylesheet" type="text/css" href="static/style/style.css">
+	<title>АТРИУМ</title>
+</head>
+<body>
+<table border="0" width="900" cellpadding="0" cellspacing="0" align="center" bgcolor="#c4c4c4">
+	<tr>
+	<td width="150" align="center">
+		<a href="/">
+			<img src="static/images/logo.svg" alt="Лого Атриум">
+		</a>
+    </td>
+	<td align="center"><H1>ТРК"АТРИУМ"</H1></td>
+	<td width="250">
+		{{if .User}}
+			<div>
+				<p style="font-size: 16px;">Добро пожаловать, {{.User}}!</p>
+				<form action="/logout" method="post" style="display: inline-block; border: none;">
+					<input type="submit" value="Выйти" style="padding: 9px 27px;">
+				</form>
+				<button onclick="window.location.href='/basket'" style="padding: 9px 20px;display: inline-block; border: none;">🛒</button>
+				{{if eq .User "admin"}}
+					<button onclick="window.location.href='/account'" style="margin-left: 8%; padding: 9px 20px;">account</button>
+				{{end}}
+			</div>
+		{{else}}
+			<button onclick="window.location.href='/login'" style="padding: 9px 20px;">Войти</button>
+			<button id="login-button" onclick="window.location.href='/registration'" style="padding: 9px 20px;">Регистрация</button>
+		{{end}}
+	</td>
+	</tr>
+</table> 
+
+<table border="0" width="900" cellpadding="10" align="center" style="margin-top: 10px;">
+	<tr>
+	<td align="center"><a href="https://yandex.ru/maps/-/CDU~BGi6">Карта</a></td>
+	<td align="center"><a href="/contacts">Контакты</a></td>
+	<td align="center"><a href="/rent">Аренда</a></td>
+	</tr>
+</table> 
+<BR>
+<table border="0" width="900" cellpadding="5" cellpadding="0" align="center">
+	<tr>
+		<td width="150" cellpadding="5" valign="top" align="center" bgcolor="#c4c4c4">
+			<p><a href="/news" style="margin-top: 5px;">Новости</a></p>
+			<p><a href="/card"style="margin-top: 5px;">Карта лояльности</a></p>
+			<p><a href="/sale" style="margin-top: 5px;">Скидки</a></p>
+			<p><a href="/support" style="margin-top: 5px;">Наши партнеры</a></p>
+		<td>
+		<td><H1  align="center">Добро пожаловать в АТРИУМ!</H1>
+			<p style="text-align: justify;">
+				Торгово-развлекательный Комплекс АТРИУМ расположен
+            в самом центре Москвы – прямо на Садовом кольце.
+            Работает ежедневно, без перерыва на обед.
+            Большинство магазинов открыты с 10.00 до 23.00
+			</p>
+			<p>Важная таблица:<BR>
+				<table border="3" cellpadding="10" cellspacing="0" style="margin: 0 auto; background-color: #f2f2f2; border-collapse: collapse; width: 50%;">
+					<tr>
+						<td rowspan="3" style="background-color: #ababab; font-weight: bold; text-align: center;">График работы</td>
+						<td colspan="2" style="background-color: #ababab; font-weight: bold; text-align: center;">Пн-Вс</td>
+					</tr>
+					<tr>
+						<td style="border: 1px solid #000; text-align: center;">10:00 - 23:00</td>
+						<td style="border: 1px solid #000; text-align: center;">10:00 - 23:00</td>
+					</tr>
+					<tr>
+						<td style="border: 1px solid #000; text-align: center;">10:00 - 23:00</td>
+						<td style="border: 1px solid #000; text-align: center;">10:00 - 23:00</td>
+					</tr>
+				</table>
+            <h2 align="center"><a href="https://drive.google.com/file/d/1vi1P9HRcWAZsm2r_h2muDJwnN8dR6PGL/view?usp=drivesdk">Скачать путеводитель</a></h2>
+            <div id="map" style="width: 100%; height: 400px;"></div>
+            <BR>Наши магазины:<BR>
+			<ul type="circle">
+				<li><img src="static/images/icon/adidas.png" alt="icon" style="width: 5%; height: 5%;"> Adidas	</li>
+				<li><img src="static/images/icon/nike.png" alt="icon" style="width: 5%; height: 5%;"> Nike </li>
+				<li><img src="static/images/icon/puma.jpg" alt="icon" style="width: 5%; height: 5%;"> Puma </li>
+			</ul>
+			<ol type="a">
+				<li><img src="static/images/icon/cr.jpg" alt="icon" style="width: 5%; height: 5%;"> CR </li>
+				<li><img src="static/images/icon/xc.jpg" alt="icon" style="width: 5%; height: 5%;"> XE </li>
+				<li><img src="static/images/icon/dub.jpg" alt="icon" style="width: 5%; height: 5%;"> DUB </li>
+			</ol>
+			<ol type="A">
+				<li>Продукты
+				</li>
+				<li> Крутые магазины
+					<ol type="a">
+						<li>Магазин бананов
+						</li>
+						<li>Магазин резисторов
+						</li>
+					</ol>
+				<li> Магазин носков
+			</ol>
+			Мы любим <B>бананы</B>
+		</td>
+ 		<td width="190" cellpadding="5" valign="top" align="center" bgcolor="#c4c4c4">
+            <a href="https://www.adidas.ru/"><img with="100" height="100" src="static/images/adidas.png" alt="Adidas"></a>
+            <a href="https://www.nike.com/ru/"><img with="100" height="200" src="static/images/nike.svg" alt="Nike"></a>
+			<a href="https://ua.puma.com/"><img with="100" height="100" src="static/images/puma.png" alt="Puma"></a>
+			<a href="https://www.reebok.ru/"><img with="100" height="100" src="static/images/reebok.png" alt="Reebok" style="margin-top: 40%;"></a>
+			<a href="https://www.cpcompany.com/"><img with="100" height="100" src="static/images/cp_company.png" alt="C.P.Company" style="margin-top: 40%;"></a>
+		</td>
+	</tr>
+</table>
+
+<script>
+    ymaps.ready(init);
+
+    function init() {
+        var map = new ymaps.Map('map', {
+            center: [55.757113, 37.659049], // Замените на координаты вашего объекта
+            zoom: 16 // Установите желаемый масштаб
+        });
+
+        var placemark = new ymaps.Placemark([55.757113, 37.659049], {
+        });
+
+        map.geoObjects.add(placemark);
+    }li
+</script>
+
+<footer>
+    <div class="footer-content" >
+        <ul style="list-style-type: none">
+            <li>Москва, м. Курская / м. Чкаловская, ул. Земляной вал, 33</li>
+            <li>Большинство магазинов работает с 10:00 до 23:00</li>
+            <li>Контактный телефон: +7(495) 970-15-55</li>
+            <li>© Все права защищены</li>
+        </ul>
+    </div>
+</footer>
+
+</body>
+</html>

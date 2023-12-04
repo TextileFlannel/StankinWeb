@@ -1,0 +1,142 @@
+footer {
+    background-color: #ababab;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+body {
+    background-color: #f8f8f8;
+    font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    min-height: 100vh;
+}
+
+
+
+a {
+    color: #007bff; 
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+ol {
+    list-style-type: none;
+}
+
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccccccef;
+    border-radius: 5px;
+}
+
+h1 {
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input[type="tel"],
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: none;
+}
+
+input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.product-card {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 80px;
+    padding: 20px;
+    max-width: 300px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    text-align: justify;
+}
+
+.product-image {
+    max-width: 100%;
+    height: auto;
+}
+
+.product-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0;
+    text-align: center;
+}
+
+.product-description {
+    margin: 10px 0;
+    text-align: justify;
+}
+
+.product-features {
+    font-size: 14px;
+    margin: 10px 0;
+    text-align: justify;
+}
+
+
+.label-temp {
+    display: block;
+    cursor: pointer;
+    text-align: center;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff; /* Цвет фона для кнопок регистрации */
+    color: #fff; /* Цвет текста для кнопок регистрации */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+    font-size: 15px;
+}
+
+/* Стиль для кнопки входа */
+#login-button {
+    background-color: transparent; /* Прозрачный фон для кнопки входа */
+    color: #007bff; /* Цвет текста для кнопки входа */
+    border: none;
+    font-size: 15px;
+}
+
+/* При наведении на кнопки регистрации изменить цвет фона */
+button:hover {
+    background-color: #0056b3;
+}
+
+#login-button:hover {
+    color: #0056b3; /* Цвет текста при наведении на кнопку входа */
+}
